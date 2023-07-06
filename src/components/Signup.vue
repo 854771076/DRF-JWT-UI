@@ -99,7 +99,7 @@ export default {
           this.$api.emailcode,
           {
             'email': this.formdata.email,
-            'action': this.formdata.action
+            'action': this.action
           }
         )
           .then(response => {
