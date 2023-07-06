@@ -2,6 +2,7 @@ import { createRouter, createWebHistory  } from 'vue-router'
 
 import Home from './components/Home.vue'
 import Login from './components/Login.vue'
+import Signup from './components/Signup.vue'
 
 // 创建路由对象
 const router = createRouter({
@@ -9,6 +10,7 @@ const router = createRouter({
   routes: [
     { path: '/', name:'首页',component: Home },
     { path: '/login',name:'登录', component: Login },
+    { path: '/signup',name:'注册', component: Signup },
   ],
 })
 

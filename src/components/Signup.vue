@@ -1,6 +1,6 @@
 <template>
   <Form :action="login" :formdata="formdata">
-    <template v-slot:formname >登录</template>
+    <template v-slot:formname >注册</template>
     <template v-slot:alert>
       <div class="alert alert-danger" role="alert" ref="alert" v-show="formdata.isalert"></div>
     </template>

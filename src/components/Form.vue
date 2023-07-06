@@ -1,0 +1,59 @@
+<template>
+    <div class="form" @submit="submitForm">
+        <div id="formname" tag="div">
+            <slot name="formname"></slot>
+        </div>
+        <form novalidate>
+            <slot name="alert"></slot>
+            <div class="form-group">
+                <slot name="form"></slot>
+            </div>
+
+        </form>
+    </div>
+</template>
+<script>
+import '../assets/css/form.css'
+export default {
+    name: 'Form',
+    props: {
+        action: {
+            type: Function,
+            required: true
+        },
+        formdata: {
+            type: Object,
+            required: true
+        }
+    },
+    methods: {
+        async submitForm(event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            // 使用Bootstrap的表单验证样式
+            if (event.target.checkValidity()) {
+                // 执行认证逻辑
+                await this.action()
+                
+            } else {
+                event.target.classList.add('was-validated');
+            }
+        },
+    },
+};
+</script>
+<style lang="less" scoped>
+input {
+    height: 45px;
+}
+
+* {
+    font-size: 15px;
+}
+
+.more {
+    margin-top: 15px;
+}
+</style>
