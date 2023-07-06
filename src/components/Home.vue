@@ -94,10 +94,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-h2 {
-  // height: 30px;
+h2 {  
   margin: 0;
-  // line-height: 30px;
 
 }
 </style>

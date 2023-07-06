@@ -1,8 +1,8 @@
 <template>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid" >
-            <strong>
-                <a class="navbar-brand" href="#"><slot name="logo"></slot></a>
+            <strong class="navbar-brand">
+                <slot name="logo"></slot>
             </strong>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
-strong{
-    height: 35px;
-}
+
 </style>
