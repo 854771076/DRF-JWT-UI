@@ -21,10 +21,6 @@ export default {
             type: Function,
             required: true
         },
-        formdata: {
-            type: Object,
-            required: true
-        }
     },
     methods: {
         async submitForm(event) {

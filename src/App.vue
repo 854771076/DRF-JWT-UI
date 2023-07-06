@@ -29,8 +29,7 @@ export default {
         localStorage.setItem('accessToken', access);
       })
       .catch(error => {
-        console.error('刷新令牌时发生错误:', error);
-
+        // console.error('刷新令牌时发生错误:', error);
       }); 
       }
       
