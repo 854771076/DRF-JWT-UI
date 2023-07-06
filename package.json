@@ -1,0 +1,20 @@
+{
+  "name": "drf_jwt_ui",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "vue": "^3",
+    "vue-router": "^4.0.3",
+    "vue-toast-notification": "^3"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.4",
+    "less": "^3.11.1",
+    "vite": "^1.0.0-rc.13"
+    
+  }
+}

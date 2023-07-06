@@ -1,0 +1,50 @@
+.form{
+    min-width: 300px;
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 60px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px 30px;
+    box-shadow: 1px 4px 8px 0 #dee3e8;
+}
+
+.info{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+}
+.col-md-6{
+    padding: 0;
+    width: 100%;
+}
+.sb{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+#codeinput{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#id_code{
+    width:calc(100% - 150px);
+}
+#code{
+    cursor: pointer;
+    width: 135px
+    /* border: 1px solid black; */
+}
+#formname{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    color: rgb(16, 136, 11);
+    font-size: 23px;
+    font-weight: 200;
+    line-height: 60px;
+}
