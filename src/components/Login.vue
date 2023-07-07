@@ -42,7 +42,7 @@
       </div>
       <div class="sb">
         <button type="submit" class="btn btn-dark">登录</button>&nbsp;
-        <button class="btn btn-light" @click="this.$router.push('/signup');">注册</button>
+        <button type="button" class="btn btn-light" @click="this.$router.push('/signup');">注册</button>
       </div>
     </template>
   </Form>

@@ -59,7 +59,7 @@
       </div>
       <div class="sb">
         <button type="submit" class="btn btn-dark">注册</button>&nbsp;
-        <button class="btn btn-light" @click="this.$router.push('/login');">登录</button>
+        <button type="button" class="btn btn-light" @click="this.$router.push('/login');">登录</button>
       </div>
     </template>
   </Form>

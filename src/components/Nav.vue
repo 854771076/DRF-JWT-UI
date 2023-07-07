@@ -33,5 +33,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+nav{
+    height: 55px;
+}
 </style>

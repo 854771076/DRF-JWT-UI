@@ -9,12 +9,9 @@
       </li>
     </template>
     <template v-slot:userinfo>
-      <template v-if="!is_login">
-        <button type="button" class="btn btn-dark" @click="this.$router.push('/login');">登录</button>
-        <button type="button" class="btn btn-light" style="margin: 0;" @click="this.$router.push('/signup');">注册</button>
-      </template>
-      <template v-else>
-        <li class="nav-item dropdown">
+
+        
+        <li class="nav-item dropdown" style="display: none;" ref="userinfo">
         <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"
           id="down" style="line-height: 30px;">
           <img :src="baseurl+userinfo.photo" class="rounded-circle" height="30" width="30" style="margin-right: 10px;">{{ userinfo.name }}
@@ -42,7 +39,9 @@
           <li><a class="dropdown-item" @click="logout">退出登陆</a></li>
         </ul>
       </li>
-      </template>     
+      <button  type="button" class="btn btn-dark" @click="this.$router.push('/login');" style="display: none;" ref="button1">登录</button>
+      <button  type="button" class="btn btn-light" style="margin: 0;display: none;" @click="this.$router.push('/signup');" ref="button2">注册</button>
+
     </template>
   </Nav>
 </template>
@@ -53,13 +52,15 @@ import Nav from './Nav.vue'
 export default {
   name: 'Home',
   created() {
+
     this.getUserinfo()
+    
   },
   data() {
     return {
       userinfo: {},
       baseurl:this.$baseUrl,
-      is_login:false
+      // is_login:false
     }
   },
   methods: {
@@ -79,11 +80,18 @@ export default {
       })
         .then(response => {
             this.userinfo=response.data.data
-            this.is_login=true
+            // this.is_login=true
+            this.$refs.userinfo.style.display='block'
+
         })
         .catch(error => {
-          // 处理错误
+          this.$refs.button1.style.display='block'
+          this.$refs.button2.style.display='block'
         });
+      }else{
+        this.$refs.button1.style.display='block'
+        this.$refs.button2.style.display='block'
+
       }
     }
   },
