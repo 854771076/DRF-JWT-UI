@@ -44,10 +44,11 @@
 
     </template>
   </Nav>
+  
 </template>
 
 <script>
-// import '../assets/css/public.css'
+
 import Nav from './Nav.vue'
 export default {
   name: 'Home',
@@ -69,10 +70,10 @@ export default {
       localStorage.clear()
       this.$router.push('/login')
     },
-    async getUserinfo() {
+    getUserinfo() {
       let token=localStorage.getItem('accessToken')
       if(token){
-        await this.$http.get(this.$api.userinfo, {
+        this.$http.get(this.$api.userinfo, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer '+token
@@ -89,8 +90,11 @@ export default {
           this.$refs.button2.style.display='block'
         });
       }else{
-        this.$refs.button1.style.display='block'
-        this.$refs.button2.style.display='block'
+        this.$nextTick(()=>{
+          this.$refs.button1.style.display='block'
+          this.$refs.button2.style.display='block'
+        })
+        
 
       }
     }

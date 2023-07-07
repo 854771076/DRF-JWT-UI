@@ -13,7 +13,7 @@
     </div>
 </template>
 <script>
-import '../assets/css/form.css'
+import '../../assets/css/form.css'
 export default {
     name: 'Form',
     props: {
