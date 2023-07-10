@@ -1,5 +1,5 @@
 <template>
-  <Form :action="signup" :formdata="formdata">
+  <Form :action="signup" >
     <template v-slot:formname>注册</template>
     <template v-slot:alert>
       <div class="alert alert-danger" role="alert" ref="alert" v-show="isalert"></div>

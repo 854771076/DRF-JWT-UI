@@ -13,16 +13,16 @@ export default {
       refreshTokenExpirationTime: 1000*60*this.$refreshTime, // 刷新令牌的过期时间，替换为实际的值
     };
   },
-  mounted() {
+  async mounted() {
     // 页面加载时开始定时刷新令牌
-    this.startTokenRefresh();
+    await this.startTokenRefresh();
   },
   methods: {
     // 调用刷新令牌接口
-    refreshAccessToken() {
+    async refreshAccessToken() {
       if(localStorage.getItem('refreshToken') || sessionStorage.getItem('refreshToken')){
         let refresh=localStorage.getItem('refreshToken')||sessionStorage.getItem('refreshToken')
-        this.$http.post(this.$api.refresh,{'refresh':refresh})
+        await this.$http.post(this.$api.refresh,{'refresh':refresh})
       .then(response => {
         const { access } = response.data;
         // 将新的访问令牌存储在本地（例如使用localStorage）

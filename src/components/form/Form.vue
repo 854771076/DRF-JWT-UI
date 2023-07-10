@@ -1,4 +1,9 @@
 <template>
+    <Snav>
+        <template v-slot:name>
+            <slot name="formname"></slot>
+        </template>
+    </Snav>
     <div class="form" @submit="submitForm">
         <div id="formname" tag="div">
             <slot name="formname"></slot>
@@ -14,6 +19,7 @@
 </template>
 <script>
 import '../../assets/css/form.css'
+import Snav from '../Snav.vue'
 export default {
     name: 'Form',
     props: {
@@ -32,12 +38,15 @@ export default {
             if (event.target.checkValidity()) {
                 // 执行认证逻辑
                 await this.action()
-                
+
             } else {
                 event.target.classList.add('was-validated');
             }
         },
     },
+    components: {
+        Snav
+    }
 };
 </script>
 <style lang="less" scoped>

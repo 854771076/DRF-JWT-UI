@@ -1,0 +1,182 @@
+#user {
+    padding: 0 20px;
+}
+
+.userdata {
+    width: 100%;
+    display: flex;
+    height: 70px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+
+    border-radius: 15px;
+    box-sizing: content-box;
+}
+
+.mine {
+    background-color: #ffffff7d;
+    height: 90%;
+}
+
+.headerpic {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    /* background-color: rgb(192, 79, 79); */
+    border: 1px #80808029 solid;
+
+}
+
+.headerpic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+}
+
+.accountinfo {
+    flex: 1;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#m_account {
+    color: gray;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+#m_username {
+    color: #ff7e3e;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.m_invitedinfo {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    padding: 15px 0;
+}
+
+.m_invitedinfo>div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.m_invitedinfo>div>span:nth-child(2) {
+    color: gray;
+    font-size: 12px;
+}
+
+.m_invitedinfo>div:nth-child(2) {
+    border-left: 1px #80808029 solid;
+    border-right: 1px #80808029 solid;
+}
+
+.pxmu-toast {
+    bottom: 80px !important;
+}
+
+.fun_card {
+    width: 100%;
+
+    padding: 10px 0px;
+    background-color: #fff;
+    border-radius: 15px;
+    border-top: 1px solid #80808029;
+    border-bottom: 1px solid #80808029;
+
+}
+
+.fun_card {
+    display: flex;
+
+}
+
+.fun_card>a {
+    display: flex;
+    height: 100%;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fun_card>a>span {
+    font-size: 12px;
+}
+
+.fun_card>a>i {
+    font-size: 25px;
+    color: skyblue;
+    margin-bottom: 5px;
+}
+
+.footer {
+    height: 1px;
+    width: 100%;
+    /* background: rgba(0,0,0,0.8); */
+}
+
+#pager {
+    margin-top: 20px;
+    display: flex;
+    height: 45px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#pager a {
+    display: block;
+    padding: 0px 5px;
+
+}
+
+#curpage {
+    background-color: orange;
+    color: white;
+}
+
+.setting {
+    margin-top: 20px;
+    color: black;
+    font-weight: 700;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.setting>a {
+    height: 55px;
+    display: flex;
+
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.setting>div>span {
+    width: 85px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.setting * {
+    color: #666;
+}
+
+#logout {
+    margin-top: 20px;
+    display: block;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 40px;
+    text-align: center;
+}

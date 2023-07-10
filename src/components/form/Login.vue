@@ -37,7 +37,7 @@
             <input type="checkbox" v-model="is_remember" name="checkbox"
               style="height: 17px;width: 15px;    vertical-align: text-bottom;"> 记住密码
           </label>
-          <a style="float:right">忘记密码</a>
+          <a style="float:right" href="/foreget">忘记密码</a>
         </div>
       </div>
       <div class="sb">
