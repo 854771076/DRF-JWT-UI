@@ -85,7 +85,7 @@
         </span>
         <i class="fa-solid fa-chevron-up fa-rotate-90"></i>
       </a>
-      <a href="/changePsw" div>
+      <a href="/foreget" div>
         <span>
           <i class="fa-solid fa-user-shield"></i>
           <i>修改密码</i>

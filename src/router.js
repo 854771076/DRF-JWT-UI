@@ -13,8 +13,8 @@ const router = createRouter({
     { path: '/', name:'首页',component: Home },
     { path: '/login',name:'登录', component: Login },
     { path: '/signup',name:'注册', component: Signup },
-    { path: '/foreget',name:'注册', component: Foreget },
-    { path: '/changeuserinfo',name:'注册', component: Changeinfo },
+    { path: '/foreget',name:'忘记密码', component: Foreget },
+    { path: '/changeuserinfo',name:'修改用户信息', component: Changeinfo },
 
   ],
 })
